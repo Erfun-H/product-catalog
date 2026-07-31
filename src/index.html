@@ -1,15 +1,81 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./index.css" type="text/css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    <link rel="stylesheet" href="./index.css">
 </head>
 
-<body>
+<body class="font-inter text-zinc-700">
+    <!-- All icons -->
+    <svg class="hidden">
+        <symbol id="heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+        </symbol>
+        <symbol id="search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m21 21-4.34-4.34" />
+            <circle cx="11" cy="11" r="8" />
+        </symbol>
+        <symbol id="menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 5h16" />
+            <path d="M4 12h16" />
+            <path d="M4 19h16" />
+        </symbol>
+    </svg>
+
     <!-- App Header -->
-    <header></header>
+    <header class="flex items-center justify-between px-6 h-20 border-b border-b-gray-200">
+        <!-- Menu(Mobile) & Logo -->
+        <div class="flex items-center gap-x-4">
+            <!-- Mobile Menu -->
+            <button class="cursor-pointer lg:hidden">
+                <svg class="size-7">
+                    <use href="#menu"></use>
+                </svg>
+            </button>
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-x-2">
+                <img src="images/logo.png" alt="logo" class="w-8 lg:w-10">
+                <h1 class="text-primary text-xl lg:text-2xl font-inter-bold">Shopify</h1>
+            </a>
+        </div>
+
+        <!-- Search(Desktop) -->
+        <div class="max-lg:hidden">
+            <div class="relative">
+                <form>
+                    <input type="search" name="q" placeholder="Search products..." class="outline-none w-120 h-11 bg-white border border-gray-200 rounded-lg pr-2 py-2 input--has-icon">
+                    <button type="submit" class="absolute top-0 bottom-0 left-3 my-auto cursor-pointer">
+                        <svg class="size-6">
+                            <use href="#search"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Search(Mobile) & Favorite icons -->
+        <div class="flex gap-x-4">
+            <!-- Search Icon -->
+            <button class="cursor-pointer lg:hidden">
+                <svg class="size-7">
+                    <use href="#search"></use>
+                </svg>
+            </button>
+            <!-- Favorite -->
+            <button class="cursor-pointer">
+                <svg class="size-7">
+                    <use href="#heart"></use>
+                </svg>
+            </button>
+        </div>
+    </header>
 
     <!-- App Main -->
     <main></main>
