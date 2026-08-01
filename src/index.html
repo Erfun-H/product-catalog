@@ -30,6 +30,34 @@
             <path d="M4 12h16" />
             <path d="M4 19h16" />
         </symbol>
+        <symbol id="sliders-horizontal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 5H3" />
+            <path d="M12 19H3" />
+            <path d="M14 3v4" />
+            <path d="M16 17v4" />
+            <path d="M21 12h-9" />
+            <path d="M21 19h-5" />
+            <path d="M21 5h-7" />
+            <path d="M8 10v4" />
+            <path d="M8 12H3" />
+        </symbol>
+        <symbol id="list-filter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 5h20" />
+            <path d="M6 12h12" />
+            <path d="M9 19h6" />
+        </symbol>
+        <symbol id="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+        </symbol>
+        <symbol id="x" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+        </symbol>
     </svg>
 
     <!-- App Header -->
@@ -53,7 +81,8 @@
         <div class="max-lg:hidden">
             <div class="relative">
                 <form>
-                    <input type="search" name="q" placeholder="Search products..." class="outline-none w-120 h-11 bg-white border border-gray-200 rounded-lg pr-2 py-2 input--has-icon">
+                    <input type="search" name="q" placeholder="Search products..."
+                        class="outline-none w-120 h-11 bg-white border border-gray-200 rounded-lg pr-2 py-2 input--has-icon">
                     <button type="submit" class="absolute top-0 bottom-0 left-3 my-auto cursor-pointer">
                         <svg class="size-6">
                             <use href="#search"></use>
@@ -81,7 +110,384 @@
     </header>
 
     <!-- App Main -->
-    <main></main>
+    <main class="py-6">
+        <!-- Products -->
+        <section>
+            <div class="container">
+                <!-- Products Header -->
+                <div class="lg:hidden">
+                    <h2 class="text-xl font-inter-bold mb-5">All Products</h2>
+                </div>
+
+                <!-- Products Body -->
+                <div class="grid grid-cols-1 lg:grid-cols-12">
+                    <!-- Filter & Sort -->
+                    <div class="col-span-3 mr-3">
+                        <!-- Filter & Sort Mobile -->
+                        <div class="grid grid-cols-2 gap-x-2.5 lg:hidden">
+                            <button
+                                class="flex-center h-11 gap-x-2 font-inter-medium text-sm border border-gray-200 rounded-lg">
+                                <svg class="size-5">
+                                    <use href="#sliders-horizontal"></use>
+                                </svg>
+                                <span>Filters</span>
+                            </button>
+                            <button
+                                class="flex-center h-11 gap-x-2 font-inter-medium text-sm border border-gray-200 rounded-lg">
+                                <svg class="size-5">
+                                    <use href="#list-filter"></use>
+                                </svg>
+                                <span>Sort</span>
+                            </button>
+                        </div>
+
+                        <!-- Filter & Sort Desktop -->
+                        <aside
+                            class="max-lg:hidden border border-gray-200 shadow-sm rounded-xl px-4 pb-4 pt-8 divide-y *:pb-5 *:mb-5 divide-gray-200">
+                            <!-- Categories -->
+                            <div>
+                                <span class="text-xl font-inter-semibold">Categories</span>
+                                <div class="flex flex-col gap-y-1 mt-6">
+                                    <button class="btn-filter-category btn-filter-category--active">
+                                        <span>All Categories</span>
+                                        <span>(120)</span>
+                                    </button>
+                                    <button class="btn-filter-category">
+                                        <span>Electronics</span>
+                                        <span>(32)</span>
+                                    </button>
+                                    <button class="btn-filter-category">
+                                        <span>Clothing</span>
+                                        <span>(24)</span>
+                                    </button>
+                                    <button class="btn-filter-category">
+                                        <span>Shoes</span>
+                                        <span>(18)</span>
+                                    </button>
+                                    <button class="btn-filter-category">
+                                        <span>Accessories</span>
+                                        <span>(20)</span>
+                                    </button>
+                                    <button class="btn-filter-category">
+                                        <span>Home & Living</span>
+                                        <span>(12)</span>
+                                    </button>
+                                    <button class="btn-filter-category">
+                                        <span>Beauty</span>
+                                        <span>(8)</span>
+                                    </button>
+                                    <button class="btn-filter-category">
+                                        <span>Sports</span>
+                                        <span>(6)</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Sort -->
+                            <div>
+                                <span class="text-xl font-inter-semibold">Sort</span>
+                                <div class="flex flex-col gap-y-2 mt-4 pl-2">
+                                    <!-- Sort Item -->
+                                    <label class="flex items-center gap-x-2 text-sm font-inter-medium">
+                                        <input type="radio" name="sort" value="highest_price" class="accent-primary">
+                                        <span>Highest price</span>
+                                    </label>
+                                    <!-- Sort Item -->
+                                    <label class="flex items-center gap-x-2 text-sm font-inter-medium">
+                                        <input type="radio" name="sort" value="lowest_price" class="accent-primary">
+                                        <span>Lowest price</span>
+                                    </label>
+                                    <!-- Sort Item -->
+                                    <label class="flex items-center gap-x-2 text-sm font-inter-medium">
+                                        <input type="radio" name="sort" value="most_popular" class="accent-primary">
+                                        <span>Most popular</span>
+                                    </label>
+                                    <!-- Sort Item -->
+                                    <label class="flex items-center gap-x-2 text-sm font-inter-medium">
+                                        <input type="radio" name="sort" value="newest" class="accent-primary">  
+                                        <span>Newest</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Filters -->
+                            <div>
+                                <span class="text-xl font-inter-semibold">Filters</span>
+                                <!-- Filters Wrapper -->
+                                <div class="pl-2 mt-6">
+                                    <!-- Filter Rating -->
+                                    <div>
+                                        <span class="font-inter-semibold">Rating</span>
+                                        <div class="flex flex-col gap-y-1 mt-4">
+                                            <!-- Rating Item -->
+                                            <div class="flex justify-between items-center">
+                                                <label class="flex items-center gap-x-2">
+                                                    <input type="radio" name="rating" value="5" class="accent-primary">
+                                                    <!-- Stars -->
+                                                    <div class="relative">
+                                                        <!-- Colorless -->
+                                                        <div class="flex items-center gap-x-0.5 text-gray-400">
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                        </div>
+                                                        <div
+                                                            class="absolute top-0 left-0 flex items-center gap-x-0.5 text-yellow-400">
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                                <span class="text-gray-400 text-sm">(45)</span>
+                                            </div>
+                                            <!-- Rating Item -->
+                                            <div class="flex justify-between items-center">
+                                                <label class="flex items-center gap-x-2">
+                                                    <input type="radio" name="rating" value="4" class="accent-primary">
+                                                    <!-- Stars -->
+                                                    <div class="relative">
+                                                        <!-- Colorless -->
+                                                        <div class="flex items-center gap-x-0.5 text-gray-400">
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                        </div>
+                                                        <div
+                                                            class="absolute top-0 left-0 flex items-center gap-x-0.5 text-yellow-400">
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                                <span class="text-gray-400 text-sm">(32)</span>
+                                            </div>
+                                            <!-- Rating Item -->
+                                            <div class="flex justify-between items-center">
+                                                <label class="flex items-center gap-x-2">
+                                                    <input type="radio" name="rating" value="3" class="accent-primary">
+                                                    <!-- Stars -->
+                                                    <div class="relative">
+                                                        <!-- Colorless -->
+                                                        <div class="flex items-center gap-x-0.5 text-gray-400">
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                        </div>
+                                                        <div
+                                                            class="absolute top-0 left-0 flex items-center gap-x-0.5 text-yellow-400">
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                                <span class="text-gray-400 text-sm">(18)</span>
+                                            </div>
+                                            <!-- Rating Item -->
+                                            <div class="flex justify-between items-center">
+                                                <label class="flex items-center gap-x-2">
+                                                    <input type="radio" name="rating" value="2" class="accent-primary">
+                                                    <!-- Stars -->
+                                                    <div class="relative">
+                                                        <!-- Colorless -->
+                                                        <div class="flex items-center gap-x-0.5 text-gray-400">
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                        </div>
+                                                        <div
+                                                            class="absolute top-0 left-0 flex items-center gap-x-0.5 text-yellow-400">
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                                <span class="text-gray-400 text-sm">(8)</span>
+                                            </div>
+                                            <!-- Rating Item -->
+                                            <div class="flex justify-between items-center">
+                                                <label class="flex items-center gap-x-2">
+                                                    <input type="radio" name="rating" value="5" class="accent-primary">
+                                                    <!-- Stars -->
+                                                    <div class="relative">
+                                                        <!-- Colorless -->
+                                                        <div class="flex items-center gap-x-0.5 text-gray-400">
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                        </div>
+                                                        <div
+                                                            class="absolute top-0 left-0 flex items-center gap-x-0.5 text-yellow-400">
+                                                            <svg class="size-4">
+                                                                <use href="#star">
+                                                                </use>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                                <span class="text-gray-400 text-sm">(17)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- In Stock -->
+                                    <div class="mt-6">
+                                        <span class="font-inter-semibold">Availability</span>
+                                        <div class="flex items-center justify-between mt-4">
+                                            <label class="flex items-center gap-x-2">
+                                                <input type="checkbox" name="only_available" class="accent-primary">
+                                                <span class="">In Stock</span>
+                                            </label>
+                                            <span class="text-gray-400 text-sm">(106)</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Clear Filter Button -->
+                                <button
+                                    class="w-full h-11 mt-6 border border-primary rounded-lg text-primary cursor-pointer hover:bg-primary hover:text-white transition-colors">Clear
+                                    Filters</button>
+                            </div>
+                        </aside>
+                    </div>
+                    <!-- Products -->
+                    <div class="col-span-9"></div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- App Footer -->
     <footer></footer>
