@@ -64,18 +64,50 @@
     @apply flex items-center justify-center;
 }
 
-@layer components{
-    .btn-icon-area{
+@layer components {
+    .btn-icon-area {
         @apply flex-center size-10 cursor-pointer active:scale-90 transition-all duration-100;
     }
-    .input--has-icon{
+    .input--has-icon {
         @apply pl-12;
     }
     .btn-filter-category {
         @apply flex items-center justify-between w-full px-3 py-2 rounded-lg cursor-pointer font-inter-medium *:last:text-gray-400 *:last:text-sm *:last:font-inter;
     }
-    .btn-filter-category--active{
+    .btn-filter-category--active {
         @apply bg-primary/10 text-primary *:last:text-primary font-inter-semibold;
     }
-   
+    /* Overlay */
+    .overlay {
+        @apply fixed bg-black/30 inset-0 z-10 opacity-0 invisible transition-all;
+    }
+    .overlay--visible {
+        @apply opacity-100 visible;
+    }
+    /* Modal */
+    .modal {
+        @apply fixed z-20 invisible scale-90 opacity-0 transition-all;
+    }
+    .modal--visible {
+        @apply scale-100 opacity-100 visible;
+    }
+    /* Bottom Sheet */
+    .bottom-sheet {
+        @apply fixed -bottom-full left-0 right-0 w-full z-20 invisible opacity-0 transition-all;
+    }
+    .bottom-sheet--visible {
+        @apply visible opacity-100 bottom-0;
+    }
+    .mobile-sort-item {
+        @apply flex items-center justify-between w-full py-4 text-sm font-inter-medium transition-colors;
+    }
+    .mobile-sort-item svg {
+        @apply hidden;
+    }
+    .mobile-sort-item--active {
+        @apply text-primary font-inter-medium;
+    }
+    .mobile-sort-item--active svg {
+        @apply block;
+    }
 }
