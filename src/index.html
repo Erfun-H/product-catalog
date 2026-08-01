@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Catalog</title>
     <link rel="stylesheet" href="./index.css">
+    <meta name="theme-color" content="#4f46e5">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content=" #4f46e5">
 </head>
 
 <body class="font-inter text-zinc-700">
@@ -30,11 +33,11 @@
     </svg>
 
     <!-- App Header -->
-    <header class="flex items-center justify-between px-6 h-20 border-b border-b-gray-200">
+    <header class="flex items-center justify-between px-2 lg:px-6 h-20 border-b border-b-gray-200">
         <!-- Menu(Mobile) & Logo -->
-        <div class="flex items-center gap-x-4">
+        <div class="flex items-center gap-x-3">
             <!-- Mobile Menu -->
-            <button class="cursor-pointer lg:hidden">
+            <button class="btn-icon-area lg:hidden">
                 <svg class="size-7">
                     <use href="#menu"></use>
                 </svg>
@@ -61,15 +64,15 @@
         </div>
 
         <!-- Search(Mobile) & Favorite icons -->
-        <div class="flex gap-x-4">
+        <div class="flex gap-x-3">
             <!-- Search Icon -->
-            <button class="cursor-pointer lg:hidden">
+            <button class="btn-icon-area lg:hidden">
                 <svg class="size-7">
                     <use href="#search"></use>
                 </svg>
             </button>
             <!-- Favorite -->
-            <button class="cursor-pointer">
+            <button class="btn-icon-area">
                 <svg class="size-7">
                     <use href="#heart"></use>
                 </svg>
