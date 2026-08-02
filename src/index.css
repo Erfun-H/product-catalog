@@ -110,4 +110,8 @@
     .mobile-sort-item--active svg {
         @apply block;
     }
+    /* Product Skeleton */
+    .product-skeleton {
+        @apply animate-pulse flex sm:flex-col max-sm:items-center gap-2.5 p-2.5 border border-gray-200 rounded-lg;
+    }
 }
